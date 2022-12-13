@@ -1,10 +1,5 @@
 // Write your JavaScript code here!
 
-// import helper functions from scriptHelper
-const { formSubmission }= require('./scriptHelper.js');
-const { myFetch } = require('./scriptHelper.js');
-const { pickPlanet } = require('./scriptHelper.js');
-const { addDestinationInfo } = require('./scriptHelper.js');
 
 window.addEventListener("load", function () {
 

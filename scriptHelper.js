@@ -15,7 +15,7 @@ function addDestinationInfo(document, name, diameter, star, distance, moons, ima
                      <li>Distance from Earth: ${distance}</li>
                      <li>Number of Moons: ${moons}</li>
                  </ol>
-                 <img src="${imageURL}">
+                 <img src="${imageUrl}">
     `;
 };
 
@@ -44,6 +44,7 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
     let copilotStatus = document.getElementById("copilotStatus");
     let fuel = document.getElementById("fuelStatus");
     let cargo = document.getElementById("cargoStatus");
+
 
     // Add an alert to notify the user that all fields are required.
     // if any fields are empty, display "all fields required"
@@ -96,8 +97,9 @@ async function myFetch() {
     let planetsReturned;
     // pass url to fetch as a parameter, then use .then to handle the response data
     planetsReturned = await fetch("https://handlers.education.launchcode.org/static/planets.json").then(function (response) {
-        // use the json method to access data in the response object    
-        response.json();
+        // use the json method to access data in the response object 
+        console.log(response);   
+        return response.json();
     });
     return planetsReturned;
 };
